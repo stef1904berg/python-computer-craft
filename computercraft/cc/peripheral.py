@@ -1,9 +1,9 @@
 import inspect
 from typing import List, Optional, Type, TypeVar
 
-from ..sess import eval_lua
-from ..cc_peripherals import register_std_peripherals
-from ..cc_peripherals._base import BasePeripheral
+from computercraft.sess import eval_lua
+from computercraft.cc_peripherals import register_std_peripherals
+from computercraft.cc_peripherals._base import BasePeripheral
 
 
 __all__ = (

@@ -4,8 +4,8 @@ from os.path import join, dirname, abspath
 
 from aiohttp import web, WSMsgType
 
-from . import ser, sess
-from .rproc import lua_table_to_list
+from computercraft import ser, sess
+from computercraft.rproc import lua_table_to_list
 
 
 THIS_DIR = dirname(abspath(__file__))

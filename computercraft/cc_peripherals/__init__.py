@@ -8,6 +8,8 @@ def register_std_peripherals(register):
     from .speaker import SpeakerPeripheral
     from .term import MonitorPeripheral
     from .workbench import WorkbenchPeripheral
+    from .CreatePackager import CreatePackagerPeripheral
+    from .CreateRotationSpeedController import CreateRotationSpeedController
 
     register('command', CommandPeripheral)
     register('drive', DrivePeripheral)
@@ -50,3 +52,6 @@ def register_std_peripherals(register):
     register('speaker', SpeakerPeripheral)
     register('monitor', MonitorPeripheral)
     register('workbench', WorkbenchPeripheral)
+
+    register('Create_Packager', CreatePackagerPeripheral)
+    register('Create_RotationSpeedController', CreateRotationSpeedController)
