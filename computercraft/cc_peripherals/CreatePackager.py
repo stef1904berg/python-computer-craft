@@ -10,19 +10,14 @@ class CreatePackagerPeripheral(BasePeripheral):
     def getAddress(self):
         return self._call(b'getAddress').take_string()
 
-    # returns a dict with all strings as byte objects, might be useful to convert at least the keys somehow
-    # It works though! Returns a dict with all the data about the item
     def getItemDetail(self, slot=int):
-        return self._call(b'getItemDetail', slot).take()
+        return self._call(b'getItemDetail', slot).take_dict()
 
-    # Gets a list off all the items but again with bytes objects in dicts.
     def list(self):
-        return self._call(b'list').take()
+        return self._call(b'list').take_dict()
 
-    # Makes a package and returns true/false if successful or not
     def makePackage(self):
-        return self._call(b'makePackage').take()
+        return self._call(b'makePackage').take_bool()
 
-    #works without issues
     def setAddress(self, address):
         return self._call(b'setAddress', address).take()
