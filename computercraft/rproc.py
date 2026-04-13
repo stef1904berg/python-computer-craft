@@ -99,13 +99,15 @@ class ResultProc:
 
     def take_dict(self, decode_bytes=True):
         x = self.take()
-        if x is not None:
-            assert isinstance(x, dict)
-            if decode_bytes:
-                return _decode_rec(self._enc, x)
-            return x
-        else:
+        assert isinstance(x, dict)
+        if decode_bytes:
+            return _decode_rec(self._enc, x)
+        return x
+
+    def take_option_dict(self):
+        if self.peek() is None:
             return None
+        return self.take_dict()
 
     def take_list(self, length: int = None):
         return lua_table_to_list(self.take_dict(), length)
