@@ -1,11 +1,11 @@
 from computercraft.cc_peripherals._base import BasePeripheral
 
 
-__all__ = ('CreatePackagerPeripheral', )
+__all__ = ('CreateRePackagerPeripheral', )
 
 
-class CreatePackagerPeripheral(BasePeripheral):
-    TYPE = 'Create_Packager'
+class CreateRePackagerPeripheral(BasePeripheral):
+    TYPE = 'Create_Repackager'
 
     def getAddress(self):
         return self._call(b'getAddress').take_string()

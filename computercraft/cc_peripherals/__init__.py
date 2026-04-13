@@ -10,6 +10,7 @@ def register_std_peripherals(register):
     from .workbench import WorkbenchPeripheral
     from .CreatePackager import CreatePackagerPeripheral
     from .CreateRotationSpeedController import CreateRotationSpeedController
+    from .CreateRepackager import CreateRePackagerPeripheral
 
     register('command', CommandPeripheral)
     register('drive', DrivePeripheral)
@@ -55,3 +56,4 @@ def register_std_peripherals(register):
 
     register('Create_Packager', CreatePackagerPeripheral)
     register('Create_RotationSpeedController', CreateRotationSpeedController)
+    register('Create_Repackager', CreateRePackagerPeripheral)
