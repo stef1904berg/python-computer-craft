@@ -12,6 +12,7 @@ def register_std_peripherals(register):
     from .CreateRotationSpeedController import CreateRotationSpeedController
     from .CreateRepackager import CreateRePackagerPeripheral
     from .CreateTarget import CreateTarget
+    from .redstone_relay import RedstoneRelayPeripheral
 
     register('command', CommandPeripheral)
     register('drive', DrivePeripheral)
@@ -55,6 +56,7 @@ def register_std_peripherals(register):
     register('speaker', SpeakerPeripheral)
     register('monitor', MonitorPeripheral)
     register('workbench', WorkbenchPeripheral)
+    register('redstone_relay', RedstoneRelayPeripheral)
 
     # Create 6.0.8 or newer
     register('Create_Packager', CreatePackagerPeripheral)
